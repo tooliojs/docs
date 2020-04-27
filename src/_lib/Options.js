@@ -4,6 +4,8 @@ const defaults = require('../../package.json').toolio.docs
 
 module.exports = function(options) {
     if(options) return Merge(defaults, options)
-    if(!Package() && !Package().toolio && !Package().toolio.docs) return defaults
+    if(!Package()) return defaults
+    if(Package() && !Package().toolio) return defaults
+    if(Package() && Package().toolio && !Package().toolio.docs) return defaults
     return Merge(defaults, Package().toolio.docs)
 }
