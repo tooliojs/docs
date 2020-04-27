@@ -9,14 +9,6 @@ module.exports = joi.object({
         .required(),
     tmp: joi.string()
         .required(),
-    format: joi.object({
-        html: joi.object({
-            type: joi.string()
-                .required()
-        }).required(),
-        pdf: joi.object({
-            type: joi.string()
-                .required()
-        }).required()
-    }).required()
+    theme: joi.string()
+        .required()
 })

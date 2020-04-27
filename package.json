@@ -1,6 +1,6 @@
 {
   "name": "@toolio/docs",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,18 +16,14 @@
   },
   "toolio": {
     "docs": {
+      "theme": "toolio",
       "mode": "development",
       "entry": "docs",
       "output": "docs/__build__",
-      "tmp": "docs/__tmp__",
-      "format": {
-        "html": {
-          "type": "multi-page"
-        },
-        "pdf": {
-          "type": "single-page"
-        }
-      }
+      "tmp": "docs/__tmp__"
     }
+  },
+  "devDependencies": {
+    "@toolio/toolio-theme": "^0.1.0"
   }
 }

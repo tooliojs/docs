@@ -1,7 +1,8 @@
 const fs = require('fs')
 const os = require('os').platform()
-const Walk = require('../../_lib/Walk')
 const Write = require('./write')
+const Walk = require('../../_lib/Walk')
+const Package = require('../../_lib/Package')()
 
 module.exports = function(options) {
 
@@ -27,6 +28,35 @@ module.exports = function(options) {
         catch(err) { console.log(err); process.exit() }
     })
 
-    console.log('successfully create html files in tmp...')
-    return 0
+    let html_paths = []
+    let case_1 = `@toolio/${options.theme}-theme`
+    let case_2 = `${options.theme}-theme`
+
+    Walk(options.tmp, options, (path) => { html_paths.push(path) })
+
+    if(Package.devDependencies) {
+        for(const dep in Package.devDependencies) {
+            if(dep === case_1 || dep === case_2) {
+                const ThemeBuilder = require(dep)
+                return ThemeBuilder(options , html_paths)
+            }
+        }
+    }
+    else if(Package.dependencies) {
+        for(const dep in Package.dependencies) {
+            if(dep === case_1 || dep === case_2) {
+                const ThemeBuilder = require(dep)
+                return ThemeBuilder(options , html_paths)
+            }
+        }
+    }
+
+    try {
+        let LocalThemeBuilder = require(require('path').resolve(options.theme))
+        return LocalThemeBuilder(options , html_paths)
+    } 
+    catch (error) {
+        console.log(new Error(error))
+        process.exit()
+    }
 }
