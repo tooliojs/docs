@@ -1,12 +1,33 @@
 {
   "name": "@toolio/docs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "tooliojs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "marked": "^1.0.0"
+  },
+  "toolio": {
+    "docs": {
+      "mode": "development",
+      "entry": "docs",
+      "output": "docs/__build__",
+      "tmp": "docs/__tmp__",
+      "format": {
+        "html": {
+          "type": "multi-page"
+        },
+        "pdf": {
+          "type": "single-page"
+        }
+      }
+    }
+  }
 }
