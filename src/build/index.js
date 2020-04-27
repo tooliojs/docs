@@ -13,7 +13,7 @@ module.exports = function(format='html', options=null) {
             console.log('pdf builder coming soon...')
             process.exit()
         default:
-            console.log(`error: unrecognized build format "${format}" - expected 'html|pdf'`)
+            if(options === null) console.log(`error: unrecognized build format "${format}" - expected 'html|pdf'`)
             process.exit()
     }
 }
