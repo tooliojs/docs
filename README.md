@@ -2,10 +2,10 @@
 
 **Documentation builder with themes.**
 
-[![Chat](https://img.shields.io/badge/chat-on%20discord-blue.svg)](https://discord.gg/UuNhTFN)
+[![CircleCI](https://circleci.com/gh/tooliojs/docs.svg?style=shield)](https://circleci.com/gh/tooliojs/docs)
 [![npm (scoped)](https://img.shields.io/npm/v/@toolio/docs)](https://www.npmjs.com/package/@toolio/docs)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/tooliojs/docs/blob/master/LICENSE.md)
-<!-- [![CircleCI](https://circleci.com/gh/tooliojs/config.svg?style=shield)](https://circleci.com/gh/tooliojs/config) -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/tooliojs/docs/blob/master/LICENSE.md)
+[![Chat](https://img.shields.io/badge/chat-on%20discord-blue.svg)](https://discord.gg/UuNhTFN)
 
 ## License
 
