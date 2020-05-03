@@ -7,6 +7,32 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/tooliojs/docs/blob/master/LICENSE.md)
 [![Chat](https://img.shields.io/badge/chat-on%20discord-blue.svg)](https://discord.gg/UuNhTFN)
 
+## Install
+```
+npm install @toolio/docs --save-dev
+```
+
+## Usage
+```js
+const docs = require('@toolio/docs')
+
+docs.build('html', {
+    theme: 'toolio',
+    mode: 'development',
+    entry: 'docs',
+    output: 'docs/__build__',
+    tmp: 'docs/__tmp__',
+    order: []
+})
+```
+Will look for `markdown` files in "entry", and create
+`HTML` snippets in "tmp". Then, the process get's proxied
+to the "theme". The theme will then generate a proper 
+documentation website using the snippets from "tmp" and it 
+will place all the necessary site files into "output".
+
+DOCUMENTATION COMING SOON...
+
 ## License
 
 MIT License
