@@ -23,8 +23,5 @@
       "tmp": "docs/__tmp__",
       "order": []
     }
-  },
-  "devDependencies": {
-    "@toolio/toolio-theme": "^0.1.0"
   }
 }
