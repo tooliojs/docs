@@ -10,5 +10,8 @@ module.exports = joi.object({
     tmp: joi.string()
         .required(),
     theme: joi.string()
-        .required()
+        .required(),
+    order: joi.array().items(
+        joi.string()
+    ).required()
 })

@@ -1,6 +1,6 @@
 {
   "name": "@toolio/docs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Documentation builder with themes.",
   "main": "src/index.js",
   "scripts": {
@@ -20,7 +20,8 @@
       "mode": "development",
       "entry": "docs",
       "output": "docs/__build__",
-      "tmp": "docs/__tmp__"
+      "tmp": "docs/__tmp__",
+      "order": []
     }
   },
   "devDependencies": {
