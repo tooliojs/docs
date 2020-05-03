@@ -1,0 +1,5 @@
+.vscode/
+docs/
+test/
+node_modules
+package-lock*
